@@ -1,18 +1,63 @@
 ---
-title: "R Notebook"
+title: "DataFest - Data Machine Team"
+author: "Sose M Casas, Meria Djirar, Anna Lai,and Xiaoxiao Wu"
+date: "June 14, 2020"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
-
-```{r}
-plot(cars)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, debug=TRUE)
+install.packages('gtrendsR')
+library (gtrendsR)
+library(ggplot2)
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+## DataFest
+Presented by Meria Dijirar, Jose M Cases, Anna Lai, Xiaoxiao Wu
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+### Indoor phyiscal activity
+Exploring the trend of indoor physical activties such as workout and yoga and the will of going to a physical gym via Google Trend. 
+```{r cars}
+trends = gtrends(keyword = c("learn yoga at home","workout apps free", "gyms near me"), geo = "CA", time = "2020-03-10 2020-06-05")
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+plot(gtrendsR:: gtrends(keyword = c("learn yoga at home","workout apps free", "gyms near me"), geo = "CA", time = "2020-03-10 2020-06-05"))
+head(trends)
+```
+
+Plot the graph of google search volume over time:
+```{r}
+time_trend=trends$interest_over_time
+
+plot<-ggplot(data=time_trend, aes(x=date, y=hits,group=keyword,col=keyword))+
+        geom_smooth(span=0.09,se=FALSE)+xlab('Time')+ylab('Number of hits')+
+        theme_bw()+theme(legend.title = element_blank(),legend.position="bottom",
+        legend.text=element_text(size=12))+ggtitle("Google Search Volume")
+ plot
+
+```
+
+
+### Outdoor activities
+Exploring the trend of searching outdoor physical activties such as going to a nearby Park by google Trend. 
+```{r}
+otrends = gtrends(keyword = c("Trinity Bellwoods","High Park", "parks near me"), geo = "CA", time = "2020-01-01 2020-06-05")
+
+
+plot(gtrendsR:: gtrends(keyword = c("Trinity Bellwoods","High Park", "parks near me"), geo = "CA", time = "2020-01-01 2020-06-05"))
+head(trends)
+```
+
+
+Plot the graph of google search volume over time:
+```{r}
+otime_trend=otrends$interest_over_time
+
+plot<-ggplot(data=otime_trend, aes(x=date, y=hits,group=keyword,col=keyword))+
+        geom_smooth(span=0.09,se=FALSE)+xlab('Time')+ylab('Number of hits')+
+        theme_bw()+theme(legend.title = element_blank(),legend.position="bottom",
+        legend.text=element_text(size=12))+ggtitle("Google Search Volume")
+ plot
+
+```
