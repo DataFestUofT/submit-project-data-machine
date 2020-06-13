@@ -7,31 +7,73 @@ output:
 
 library(gtrendsR)
 library(tidyverse)
-
+library(flexdashboard)
+# General trend plots of search terms 
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
-plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2020-01-01 2020-06-08"))
-plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2019-01-01 2019-06-08"))
+plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2020-01-31 2020-06-10"))
+plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2019-01-31 2019-06-10"))
 # search hits in 2020 are generally higher than ones in 2019
 ```
 
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
 #Shopping Stores near me VS online shopping
-plot(gtrendsR::gtrends(keyword = c("stores near me + shopping mall+ shopping center","online shopping"), geo = "CA", time = "2020-01-01 2020-06-08")) #integrated index
+plot(gtrendsR::gtrends(keyword = c("stores near me + shopping mall+ shopping center","online shopping"), geo = "CA", time = "2020-01-31 2020-06-10")) #integrated index
 ```
 
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
 # Hair Salon
-plot(gtrendsR::gtrends(keyword = c("hair cut","hair salon"), geo = "CA", time = "2020-01-01 2020-06-08"))
+plot(gtrendsR::gtrends(keyword = c("hair cut","hair salon"), geo = "CA", time = "2020-01-31 2020-06-10"))
 ```
 
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
 #personal hygiene and health
 plot(gtrendsR::gtrends(keyword = c("Mask + Hand sanitizer + Toilet paper"), time = "2020-01-01 2020-06-08")) #integrated index
-plot(gtrendsR::gtrends(keyword = c("Mask","Hand sanitizer","Toilet paper"), geo = "CA", time = "2020-01-01 2020-06-08"))
+plot(gtrendsR::gtrends(keyword = c("Mask","Hand sanitizer","Toilet paper"), geo = "CA", time = "2020-01-31 2020-06-10"))
 # What's going on in April for the search term of "mask"?
 ```
 
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
-plot(gtrendsR::gtrends(keyword = c("baking + home yoga + homer exercise + home meditation + online shopping + hair cut", "stores near me + beach near me + shopping mall + hiking + park + hair salon"), time = "2020-01-31 2020-06-10")) #integrated index
-
+plot(gtrendsR::gtrends(keyword = c("baking + home yoga + homer exercise + home meditation + online shopping + hair cut", "stores near me + beach near me + shopping mall + hiking + park + hair salon"),geo = "CA", time = "2020-01-31 2020-06-10")) #integrated indoor activities v.s. outdoor activities
 ```
+##Linear regression on periods after the lockdown
+```{r,echo=T, eval=T,cache=T, message=F,warning=F}
+covid19 <- as.data.frame(readxl::read_excel("/Users/Daisy/Documents/GitHub/submit-project-data-machine/COVID-19 Canada Dataset (group by month and daily) v.s. google trend.xlsx"))
+head(covid19)
+attach(covid19)
+```
+
+```{r,echo=T, eval=T,cache=T, message=F,warning=F}
+afterLockdown<- covid19[as.Date(Date,format='%d-%m-%Y') > as.Date('2020-03-17') & as.Date(Date,format='%d-%m-%Y')<= as.Date('2020-06-09'),]
+head(afterLockdown)
+```
+
+```{r,echo=T, eval=T,cache=T, message=F,warning=F}
+cor.test(afterLockdown$indoor,afterLockdown$`Sum of numtoday`)
+after_indoor_model <- lm(afterLockdown$`Sum of numtoday`~ afterLockdown$indoor)
+summary(after_indoor_model)
+plot(after_indoor_model)
+```
+```{r,echo=T, eval=T,cache=T, message=F,warning=F}
+cor.test(afterLockdown$outdoor,afterLockdown$`Sum of numtoday`)
+after_outdoor_model <- lm(afterLockdown$`Sum of numtoday`~ afterLockdown$outdoor)
+summary(after_outdoor_model)
+plot(after_outdoor_model)
+```
+##Linear regression on periods after the lockdown and before the phase 1 reopen (May.14)
+```{r,echo=T, eval=T,cache=T, message=F,warning=F}
+phase1<- covid19[as.Date(Date,format='%d-%m-%Y') > as.Date('2020-03-17') & as.Date(Date,format='%d-%m-%Y')<= as.Date('2020-05-14'),]
+```
+
+```{r,echo=T, eval=T,cache=T, message=F,warning=F}
+cor.test(phase1$outdoor,phase1$`Sum of numtoday`)
+phase1model_outdoor <- lm(phase1$`Sum of numtoday`~ phase1$outdoor)
+summary(phase1model_outdoor)
+plot(phase1model_outdoor)
+```
+```{r,echo=T, eval=T,cache=T, message=F,warning=F}
+cor.test(phase1$indoor,phase1$`Sum of numtoday`)
+phase1model_indoor <- lm(phase1$`Sum of numtoday`~ phase1$indoor)
+summary(phase1model_indoor)
+plot(phase1model_indoor)
+```
+
