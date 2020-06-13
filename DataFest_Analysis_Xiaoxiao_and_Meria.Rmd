@@ -1,12 +1,8 @@
 ---
 title: "DataFest-Xiaoxiao Wu & Meria"
-output:
-  word_document: default
-  pdf_document: default
 ---
 
-library(gtrendsR)
-library(tidyverse)
+#Mental health
 
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
 plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2020-01-01 2020-06-08"))

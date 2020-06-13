@@ -36,10 +36,10 @@ if (knitr::is_html_output()) {
 ```
 
 
-## DataFest 2020 Summer Project presented by Data Machine Team
-### Name/ Title of our project {#sections .unnumbered}
+# DataFest 2020 Summer Project presented by Data Machine Team {.unnumbered}
+## Name/ Title of our project {#sections .unnumbered}
 
-### Indoor phyiscal activity {-}
+## Indoor phyiscal activity {-}
 Exploring the trend of indoor physical activties such as workout and yoga and the will of going to a physical gym via Google Trend. 
 ```{r cars}
 trends = gtrends(keyword = c("learn yoga at home","workout apps free", "gyms near me"), geo = "CA", time = "2020-03-10 2020-06-05")
@@ -61,7 +61,7 @@ plot<-ggplot(data=time_trend, aes(x=date, y=hits,group=keyword,col=keyword))+
 
 ```
 
-### Outdoor activities {-}
+## Outdoor activities {-}
 Exploring the trend of searching outdoor physical activties such as going to a nearby Park by google Trend. 
 ```{r}
 otrends = gtrends(keyword = c("Trinity Bellwoods","High Park", "parks near me"), geo = "CA", time = "2020-01-01 2020-06-05")
@@ -82,4 +82,36 @@ plot<-ggplot(data=otime_trend, aes(x=date, y=hits,group=keyword,col=keyword))+
         legend.text=element_text(size=12))+ggtitle("Google Search Volume")
  plot
 
+```
+
+# Interactive elements
+
+## Species
+
+```{r}
+library(rbokeh)
+figure(width = NULL, height = NULL) %>%
+  ly_points(Sepal.Length, Sepal.Width, data = iris, color = Species)
+# figure() %>%
+#   ly_points(Sepal.Length, Sepal.Width, data = iris,
+#     color = Species, glyph = Species)
+```
+
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+## Species (Quantile)
+
+```{r}
+figure(width = NULL, height = NULL, legend_location = "top_left") %>%
+  ly_quantile(Sepal.Length, group = Species, data = iris)
+```
+
+## Petal Width
+
+```{r}
+figure(width = NULL, height = NULL) %>%
+  ly_points(Sepal.Length, Sepal.Width, data = iris,
+    color = Petal.Width)
 ```

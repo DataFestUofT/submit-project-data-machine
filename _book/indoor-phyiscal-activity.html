@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Indoor phyiscal activity | DataFest - Data Machine Team</title>
+  <meta name="description" content="Indoor phyiscal activity | DataFest - Data Machine Team" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Indoor phyiscal activity | DataFest - Data Machine Team" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="DataFestUofT/submit-project-data-machine" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Indoor phyiscal activity | DataFest - Data Machine Team" />
+  
+  
+  
+
+<meta name="author" content="Jose M Casas, Meria Djirar, Anna Lai,and Xiaoxiao Wu" />
+
+
+<meta name="date" content="2020-06-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sections.html"/>
+<link rel="next" href="outdoor-activities.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/bokehjs-0.12.5/bokeh.min.css" rel="stylesheet" />
+<link href="libs/bokehjs-0.12.5/loader.css" rel="stylesheet" />
+<script src="libs/bokehjs-0.12.5/bokeh.min.js"></script>
+<script src="libs/rbokeh-binding-0.5.1/rbokeh.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\box.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">DataFest2020:Data Machine Team</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>DataFest 2020 Summer Project presented by Data Machine Team</a><ul>
+<li class="chapter" data-level="" data-path="sections.html"><a href="sections.html"><i class="fa fa-check"></i>Name/ Title of our project</a></li>
+<li class="chapter" data-level="" data-path="indoor-phyiscal-activity.html"><a href="indoor-phyiscal-activity.html"><i class="fa fa-check"></i>Indoor phyiscal activity</a></li>
+<li class="chapter" data-level="" data-path="outdoor-activities.html"><a href="outdoor-activities.html"><i class="fa fa-check"></i>Outdoor activities</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="interactive-elements.html"><a href="interactive-elements.html"><i class="fa fa-check"></i><b>1</b> Interactive elements</a><ul>
+<li class="chapter" data-level="1.1" data-path="species.html"><a href="species.html"><i class="fa fa-check"></i><b>1.1</b> Species</a></li>
+<li class="chapter" data-level="1.2" data-path="column.html"><a href="column.html"><i class="fa fa-check"></i><b>1.2</b> Column</a></li>
+<li class="chapter" data-level="1.3" data-path="species-quantile.html"><a href="species-quantile.html"><i class="fa fa-check"></i><b>1.3</b> Species (Quantile)</a></li>
+<li class="chapter" data-level="1.4" data-path="petal-width.html"><a href="petal-width.html"><i class="fa fa-check"></i><b>1.4</b> Petal Width</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DataFest - Data Machine Team</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="indoor-phyiscal-activity" class="section level2 unnumbered">
+<h2>Indoor phyiscal activity</h2>
+<p>Exploring the trend of indoor physical activties such as workout and yoga and the will of going to a physical gym via Google Trend.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">trends =<span class="st"> </span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> <span class="kw">c</span>(<span class="st">&quot;learn yoga at home&quot;</span>,<span class="st">&quot;workout apps free&quot;</span>, <span class="st">&quot;gyms near me&quot;</span>), <span class="dt">geo =</span> <span class="st">&quot;CA&quot;</span>, <span class="dt">time =</span> <span class="st">&quot;2020-03-10 2020-06-05&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="kw">plot</span>(gtrendsR<span class="op">::</span><span class="st"> </span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> <span class="kw">c</span>(<span class="st">&quot;learn yoga at home&quot;</span>,<span class="st">&quot;workout apps free&quot;</span>, <span class="st">&quot;gyms near me&quot;</span>), <span class="dt">geo =</span> <span class="st">&quot;CA&quot;</span>, <span class="dt">time =</span> <span class="st">&quot;2020-03-10 2020-06-05&quot;</span>))</a></code></pre></div>
+<p><img src="_main_files/figure-html/cars-1.png" width="672" /></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">head</span>(trends)</a></code></pre></div>
+<pre><code>## $interest_over_time
+##           date hits            keyword geo                  time gprop category
+## 1   2020-03-10    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 2   2020-03-11    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 3   2020-03-12    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 4   2020-03-13    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 5   2020-03-14    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 6   2020-03-15    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 7   2020-03-16   18 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 8   2020-03-17    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 9   2020-03-18    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 10  2020-03-19    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 11  2020-03-20    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 12  2020-03-21    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 13  2020-03-22    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 14  2020-03-23   16 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 15  2020-03-24    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 16  2020-03-25    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 17  2020-03-26    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 18  2020-03-27    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 19  2020-03-28    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 20  2020-03-29    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 21  2020-03-30    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 22  2020-03-31    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 23  2020-04-01   17 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 24  2020-04-02    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 25  2020-04-03    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 26  2020-04-04    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 27  2020-04-05    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 28  2020-04-06    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 29  2020-04-07    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 30  2020-04-08    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 31  2020-04-09    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 32  2020-04-10    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 33  2020-04-11    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 34  2020-04-12    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 35  2020-04-13    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 36  2020-04-14    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 37  2020-04-15    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 38  2020-04-16    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 39  2020-04-17   17 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 40  2020-04-18    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 41  2020-04-19    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 42  2020-04-20    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 43  2020-04-21    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 44  2020-04-22    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 45  2020-04-23    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 46  2020-04-24    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 47  2020-04-25    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 48  2020-04-26    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 49  2020-04-27    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 50  2020-04-28    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 51  2020-04-29    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 52  2020-04-30    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 53  2020-05-01    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 54  2020-05-02    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 55  2020-05-03    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 56  2020-05-04    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 57  2020-05-05    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 58  2020-05-06    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 59  2020-05-07    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 60  2020-05-08    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 61  2020-05-09    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 62  2020-05-10    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 63  2020-05-11    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 64  2020-05-12    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 65  2020-05-13    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 66  2020-05-14    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 67  2020-05-15    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 68  2020-05-16    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 69  2020-05-17    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 70  2020-05-18    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 71  2020-05-19    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 72  2020-05-20    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 73  2020-05-21    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 74  2020-05-22    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 75  2020-05-23    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 76  2020-05-24    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 77  2020-05-25    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 78  2020-05-26    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 79  2020-05-27    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 80  2020-05-28    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 81  2020-05-29    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 82  2020-05-30    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 83  2020-05-31    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 84  2020-06-01   17 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 85  2020-06-02    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 86  2020-06-03    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 87  2020-06-04    0 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 88  2020-06-05   16 learn yoga at home  CA 2020-03-10 2020-06-05   web        0
+## 89  2020-03-10   18  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 90  2020-03-11   18  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 91  2020-03-12   18  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 92  2020-03-13    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 93  2020-03-14   21  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 94  2020-03-15   41  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 95  2020-03-16   18  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 96  2020-03-17   27  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 97  2020-03-18   18  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 98  2020-03-19   37  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 99  2020-03-20   18  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 100 2020-03-21   40  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 101 2020-03-22   39  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 102 2020-03-23   32  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 103 2020-03-24   23  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 104 2020-03-25   27  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 105 2020-03-26   18  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 106 2020-03-27   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 107 2020-03-28   19  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 108 2020-03-29   28  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 109 2020-03-30   42  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 110 2020-03-31   34  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 111 2020-04-01   23  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 112 2020-04-02   22  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 113 2020-04-03   33  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 114 2020-04-04   19  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 115 2020-04-05   28  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 116 2020-04-06   32  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 117 2020-04-07   16  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 118 2020-04-08   27  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 119 2020-04-09   27  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 120 2020-04-10   18  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 121 2020-04-11   28  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 122 2020-04-12   19  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 123 2020-04-13    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 124 2020-04-14   41  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 125 2020-04-15   16  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 126 2020-04-16   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 127 2020-04-17   22  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 128 2020-04-18   19  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 129 2020-04-19   27  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 130 2020-04-20   16  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 131 2020-04-21   33  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 132 2020-04-22   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 133 2020-04-23    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 134 2020-04-24   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 135 2020-04-25   29  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 136 2020-04-26   19  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 137 2020-04-27   25  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 138 2020-04-28   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 139 2020-04-29   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 140 2020-04-30   24  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 141 2020-05-01   35  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 142 2020-05-02   19  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 143 2020-05-03   20  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 144 2020-05-04    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 145 2020-05-05    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 146 2020-05-06    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 147 2020-05-07   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 148 2020-05-08   51  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 149 2020-05-09    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 150 2020-05-10   19  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 151 2020-05-11   34  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 152 2020-05-12   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 153 2020-05-13   26  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 154 2020-05-14   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 155 2020-05-15    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 156 2020-05-16    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 157 2020-05-17    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 158 2020-05-18   19  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 159 2020-05-19   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 160 2020-05-20   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 161 2020-05-21   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 162 2020-05-22    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 163 2020-05-23   20  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 164 2020-05-24    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 165 2020-05-25   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 166 2020-05-26   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 167 2020-05-27   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 168 2020-05-28   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 169 2020-05-29    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 170 2020-05-30   20  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 171 2020-05-31    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 172 2020-06-01    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 173 2020-06-02   33  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 174 2020-06-03    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 175 2020-06-04   17  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 176 2020-06-05    0  workout apps free  CA 2020-03-10 2020-06-05   web        0
+## 177 2020-03-10   45       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 178 2020-03-11   83       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 179 2020-03-12   18       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 180 2020-03-13   42       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 181 2020-03-14   21       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 182 2020-03-15   55       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 183 2020-03-16  100       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 184 2020-03-17   71       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 185 2020-03-18   54       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 186 2020-03-19   43       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 187 2020-03-20   23       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 188 2020-03-21   46       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 189 2020-03-22   39       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 190 2020-03-23   40       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 191 2020-03-24   52       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 192 2020-03-25    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 193 2020-03-26   18       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 194 2020-03-27   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 195 2020-03-28   19       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 196 2020-03-29   25       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 197 2020-03-30   25       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 198 2020-03-31    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 199 2020-04-01   34       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 200 2020-04-02   16       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 201 2020-04-03   16       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 202 2020-04-04   28       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 203 2020-04-05   19       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 204 2020-04-06    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 205 2020-04-07   16       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 206 2020-04-08    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 207 2020-04-09    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 208 2020-04-10   18       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 209 2020-04-11    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 210 2020-04-12   39       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 211 2020-04-13   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 212 2020-04-14   16       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 213 2020-04-15   16       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 214 2020-04-16   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 215 2020-04-17   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 216 2020-04-18   19       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 217 2020-04-19   18       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 218 2020-04-20   16       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 219 2020-04-21   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 220 2020-04-22    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 221 2020-04-23    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 222 2020-04-24   26       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 223 2020-04-25   39       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 224 2020-04-26   19       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 225 2020-04-27    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 226 2020-04-28   25       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 227 2020-04-29   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 228 2020-04-30   16       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 229 2020-05-01   26       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 230 2020-05-02   19       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 231 2020-05-03   20       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 232 2020-05-04   33       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 233 2020-05-05   26       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 234 2020-05-06   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 235 2020-05-07   34       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 236 2020-05-08   34       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 237 2020-05-09   28       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 238 2020-05-10   57       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 239 2020-05-11   25       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 240 2020-05-12   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 241 2020-05-13   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 242 2020-05-14   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 243 2020-05-15   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 244 2020-05-16    0       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 245 2020-05-17   20       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 246 2020-05-18   37       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 247 2020-05-19   62       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 248 2020-05-20   40       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 249 2020-05-21   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 250 2020-05-22   35       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 251 2020-05-23   30       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 252 2020-05-24   41       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 253 2020-05-25   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 254 2020-05-26   52       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 255 2020-05-27   26       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 256 2020-05-28   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 257 2020-05-29   35       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 258 2020-05-30   50       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 259 2020-05-31   39       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 260 2020-06-01   34       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 261 2020-06-02   39       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 262 2020-06-03   37       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 263 2020-06-04   17       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 264 2020-06-05   32       gyms near me  CA 2020-03-10 2020-06-05   web        0
+## 
+## $interest_by_country
+## NULL
+## 
+## $interest_by_region
+##                     location hits            keyword geo gprop
+## 1              New Brunswick   NA learn yoga at home  CA   web
+## 2                    Alberta   NA learn yoga at home  CA   web
+## 3           British Columbia   NA learn yoga at home  CA   web
+## 4                    Ontario   NA learn yoga at home  CA   web
+## 5                   Manitoba   NA learn yoga at home  CA   web
+## 6  Newfoundland and Labrador   NA learn yoga at home  CA   web
+## 7                Nova Scotia   NA learn yoga at home  CA   web
+## 8      Northwest Territories   NA learn yoga at home  CA   web
+## 9                    Nunavut   NA learn yoga at home  CA   web
+## 10      Prince Edward Island   NA learn yoga at home  CA   web
+## 11                   QuÃ©bec   NA learn yoga at home  CA   web
+## 12              Saskatchewan   NA learn yoga at home  CA   web
+## 13           Yukon Territory   NA learn yoga at home  CA   web
+## 14          British Columbia  100  workout apps free  CA   web
+## 15                   Ontario   95  workout apps free  CA   web
+## 16                   Alberta   84  workout apps free  CA   web
+## 17                   QuÃ©bec   31  workout apps free  CA   web
+## 18      Prince Edward Island   NA  workout apps free  CA   web
+## 19 Newfoundland and Labrador   NA  workout apps free  CA   web
+## 20              Saskatchewan   NA  workout apps free  CA   web
+## 21                  Manitoba   NA  workout apps free  CA   web
+## 22               Nova Scotia   NA  workout apps free  CA   web
+## 23             New Brunswick   NA  workout apps free  CA   web
+## 24     Northwest Territories   NA  workout apps free  CA   web
+## 25                   Nunavut   NA  workout apps free  CA   web
+## 26           Yukon Territory   NA  workout apps free  CA   web
+## 27          British Columbia  100       gyms near me  CA   web
+## 28                  Manitoba   49       gyms near me  CA   web
+## 29                   Ontario   43       gyms near me  CA   web
+## 30              Saskatchewan   37       gyms near me  CA   web
+## 31               Nova Scotia   31       gyms near me  CA   web
+## 32                   Alberta   26       gyms near me  CA   web
+## 33                   QuÃ©bec   10       gyms near me  CA   web
+## 34           Yukon Territory   NA       gyms near me  CA   web
+## 35      Prince Edward Island   NA       gyms near me  CA   web
+## 36 Newfoundland and Labrador   NA       gyms near me  CA   web
+## 37             New Brunswick   NA       gyms near me  CA   web
+## 38     Northwest Territories   NA       gyms near me  CA   web
+## 39                   Nunavut   NA       gyms near me  CA   web
+## 
+## $interest_by_dma
+## NULL
+## 
+## $interest_by_city
+## NULL
+## 
+## $related_topics
+## NULL</code></pre>
+<p>Plot the graph of google search volume over time:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">time_trend=trends<span class="op">$</span>interest_over_time</a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3">plot&lt;-<span class="kw">ggplot</span>(<span class="dt">data=</span>time_trend, <span class="kw">aes</span>(<span class="dt">x=</span>date, <span class="dt">y=</span>hits,<span class="dt">group=</span>keyword,<span class="dt">col=</span>keyword))<span class="op">+</span></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="st">        </span><span class="kw">geom_smooth</span>(<span class="dt">span=</span><span class="fl">0.09</span>,<span class="dt">se=</span><span class="ot">FALSE</span>)<span class="op">+</span><span class="kw">xlab</span>(<span class="st">&#39;Time&#39;</span>)<span class="op">+</span><span class="kw">ylab</span>(<span class="st">&#39;Number of hits&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="st">        </span><span class="kw">theme_bw</span>()<span class="op">+</span><span class="kw">theme</span>(<span class="dt">legend.title =</span> <span class="kw">element_blank</span>(),<span class="dt">legend.position=</span><span class="st">&quot;bottom&quot;</span>,</a>
+<a class="sourceLine" id="cb4-6" title="6">        <span class="dt">legend.text=</span><span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">12</span>))<span class="op">+</span><span class="kw">ggtitle</span>(<span class="st">&quot;Google Search Volume&quot;</span>)</a>
+<a class="sourceLine" id="cb4-7" title="7"> plot</a></code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sections.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="outdoor-activities.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/DataFestUofT/submit-project-data-machine/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
