@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>DataFest - Data Machine Team</title>
-  <meta name="description" content="DataFest - Data Machine Team" />
+  <title>Chapter 1 Mental health | DataFest - Data Machine Team</title>
+  <meta name="description" content="Chapter 1 Mental health | DataFest - Data Machine Team" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="DataFest - Data Machine Team" />
+  <meta property="og:title" content="Chapter 1 Mental health | DataFest - Data Machine Team" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="DataFestUofT/submit-project-data-machine" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="DataFest - Data Machine Team" />
+  <meta name="twitter:title" content="Chapter 1 Mental health | DataFest - Data Machine Team" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="petal-width.html"/>
 
-<link rel="next" href="sections.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,11 +50,6 @@
 
 
 
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<link href="libs/bokehjs-0.12.5/bokeh.min.css" rel="stylesheet" />
-<link href="libs/bokehjs-0.12.5/loader.css" rel="stylesheet" />
-<script src="libs/bokehjs-0.12.5/bokeh.min.js"></script>
-<script src="libs/rbokeh-binding-0.5.1/rbokeh.js"></script>
 
 
 <style type="text/css">
@@ -141,13 +136,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="sections.html"><a href="sections.html"><i class="fa fa-check"></i>Name/ Title of our project</a></li>
 <li class="chapter" data-level="" data-path="indoor-phyiscal-activity.html"><a href="indoor-phyiscal-activity.html"><i class="fa fa-check"></i>Indoor phyiscal activity</a></li>
 <li class="chapter" data-level="" data-path="outdoor-activities.html"><a href="outdoor-activities.html"><i class="fa fa-check"></i>Outdoor activities</a></li>
+<li class="chapter" data-level="0.1" data-path="species.html"><a href="species.html"><i class="fa fa-check"></i><b>0.1</b> Species</a></li>
+<li class="chapter" data-level="0.2" data-path="species-quantile.html"><a href="species-quantile.html"><i class="fa fa-check"></i><b>0.2</b> Species (Quantile)</a></li>
+<li class="chapter" data-level="0.3" data-path="petal-width.html"><a href="petal-width.html"><i class="fa fa-check"></i><b>0.3</b> Petal Width</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="interactive-elements.html"><a href="interactive-elements.html"><i class="fa fa-check"></i><b>1</b> Interactive elements</a><ul>
-<li class="chapter" data-level="1.1" data-path="species.html"><a href="species.html"><i class="fa fa-check"></i><b>1.1</b> Species</a></li>
-<li class="chapter" data-level="1.2" data-path="column.html"><a href="column.html"><i class="fa fa-check"></i><b>1.2</b> Column</a></li>
-<li class="chapter" data-level="1.3" data-path="species-quantile.html"><a href="species-quantile.html"><i class="fa fa-check"></i><b>1.3</b> Species (Quantile)</a></li>
-<li class="chapter" data-level="1.4" data-path="petal-width.html"><a href="petal-width.html"><i class="fa fa-check"></i><b>1.4</b> Petal Width</a></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="mental-health.html"><a href="mental-health.html"><i class="fa fa-check"></i><b>1</b> Mental health</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -168,21 +161,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">DataFest - Data Machine Team</h1>
-<p class="author"><em>Jose M Casas, Meria Djirar, Anna Lai,and Xiaoxiao Wu</em></p>
-<p class="date"><em>June 14, 2020</em></p>
-</div>
-<div id="datafest-2020-summer-project-presented-by-data-machine-team" class="section level1 unnumbered">
-<h1>DataFest 2020 Summer Project presented by Data Machine Team</h1>
+<div id="mental-health" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Mental health</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">plot</span>(gtrendsR<span class="op">::</span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> (<span class="st">&quot;mental health&quot;</span>), <span class="dt">geo =</span> <span class="st">&quot;CA&quot;</span>, <span class="dt">time =</span> <span class="st">&quot;2020-01-01 2020-06-08&quot;</span>))</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">plot</span>(gtrendsR<span class="op">::</span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> (<span class="st">&quot;mental health&quot;</span>), <span class="dt">geo =</span> <span class="st">&quot;CA&quot;</span>, <span class="dt">time =</span> <span class="st">&quot;2019-01-01 2019-06-08&quot;</span>))</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># search hits in 2020 are generally higher than ones in 2019</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="co">#Shopping Stores near me VS online shopping</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">plot</span>(gtrendsR<span class="op">::</span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> <span class="kw">c</span>(<span class="st">&quot;stores near me + shopping mall+ shopping center&quot;</span>,<span class="st">&quot;online shopping&quot;</span>), <span class="dt">geo =</span> <span class="st">&quot;CA&quot;</span>, <span class="dt">time =</span> <span class="st">&quot;2020-01-01 2020-06-08&quot;</span>)) <span class="co">#integrated index</span></a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="co"># Hair Salon</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">plot</span>(gtrendsR<span class="op">::</span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> <span class="kw">c</span>(<span class="st">&quot;hair cut&quot;</span>,<span class="st">&quot;hair salon&quot;</span>), <span class="dt">geo =</span> <span class="st">&quot;CA&quot;</span>, <span class="dt">time =</span> <span class="st">&quot;2020-01-01 2020-06-08&quot;</span>))</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co">#personal hygiene and health</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw">plot</span>(gtrendsR<span class="op">::</span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> <span class="kw">c</span>(<span class="st">&quot;Mask + Hand sanitizer + Toilet paper&quot;</span>), <span class="dt">time =</span> <span class="st">&quot;2020-01-01 2020-06-08&quot;</span>)) <span class="co">#integrated index</span></a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">plot</span>(gtrendsR<span class="op">::</span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> <span class="kw">c</span>(<span class="st">&quot;Mask&quot;</span>,<span class="st">&quot;Hand sanitizer&quot;</span>,<span class="st">&quot;Toilet paper&quot;</span>), <span class="dt">geo =</span> <span class="st">&quot;CA&quot;</span>, <span class="dt">time =</span> <span class="st">&quot;2020-01-01 2020-06-08&quot;</span>))</a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="co"># What&#39;s going on in April for the search term of &quot;mask&quot;?</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">plot</span>(gtrendsR<span class="op">::</span><span class="kw">gtrends</span>(<span class="dt">keyword =</span> <span class="kw">c</span>(<span class="st">&quot;baking + home yoga + homer exercise + home meditation + online shopping + hair cut&quot;</span>, <span class="st">&quot;stores near me + beach near me + shopping mall + hiking + park + hair salon&quot;</span>), <span class="dt">time =</span> <span class="st">&quot;2020-01-31 2020-06-10&quot;</span>)) <span class="co">#integrated index</span></a></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="petal-width.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="sections.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -213,7 +221,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/DataFestUofT/submit-project-data-machine/edit/master/index.Rmd",
+"link": "https://github.com/DataFestUofT/submit-project-data-machine/edit/master/DataFest_Analysis_Xiaoxiao_and_Meria.Rmd",
 "text": "Edit"
 },
 "history": {

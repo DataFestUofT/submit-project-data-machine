@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.4 Petal Width | DataFest - Data Machine Team</title>
+  <meta name="description" content="1.4 Petal Width | DataFest - Data Machine Team" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.4 Petal Width | DataFest - Data Machine Team" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="DataFestUofT/submit-project-data-machine" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.4 Petal Width | DataFest - Data Machine Team" />
+  
+  
+  
+
+<meta name="author" content="Jose M Casas, Meria Djirar, Anna Lai,and Xiaoxiao Wu" />
+
+
+<meta name="date" content="2020-06-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="species-quantile.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/bokehjs-0.12.5/bokeh.min.css" rel="stylesheet" />
+<link href="libs/bokehjs-0.12.5/loader.css" rel="stylesheet" />
+<script src="libs/bokehjs-0.12.5/bokeh.min.js"></script>
+<script src="libs/rbokeh-binding-0.5.1/rbokeh.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\box.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">DataFest2020:Data Machine Team</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>DataFest 2020 Summer Project presented by Data Machine Team</a><ul>
+<li class="chapter" data-level="" data-path="sections.html"><a href="sections.html"><i class="fa fa-check"></i>Name/ Title of our project</a></li>
+<li class="chapter" data-level="" data-path="indoor-phyiscal-activity.html"><a href="indoor-phyiscal-activity.html"><i class="fa fa-check"></i>Indoor phyiscal activity</a></li>
+<li class="chapter" data-level="" data-path="outdoor-activities.html"><a href="outdoor-activities.html"><i class="fa fa-check"></i>Outdoor activities</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="interactive-elements.html"><a href="interactive-elements.html"><i class="fa fa-check"></i><b>1</b> Interactive elements</a><ul>
+<li class="chapter" data-level="1.1" data-path="species.html"><a href="species.html"><i class="fa fa-check"></i><b>1.1</b> Species</a></li>
+<li class="chapter" data-level="1.2" data-path="column.html"><a href="column.html"><i class="fa fa-check"></i><b>1.2</b> Column</a></li>
+<li class="chapter" data-level="1.3" data-path="species-quantile.html"><a href="species-quantile.html"><i class="fa fa-check"></i><b>1.3</b> Species (Quantile)</a></li>
+<li class="chapter" data-level="1.4" data-path="petal-width.html"><a href="petal-width.html"><i class="fa fa-check"></i><b>1.4</b> Petal Width</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DataFest - Data Machine Team</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="petal-width" class="section level2">
+<h2><span class="header-section-number">1.4</span> Petal Width</h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="kw">figure</span>(<span class="dt">width =</span> <span class="ot">NULL</span>, <span class="dt">height =</span> <span class="ot">NULL</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb17-2" title="2"><span class="st">  </span><span class="kw">ly_points</span>(Sepal.Length, Sepal.Width, <span class="dt">data =</span> iris,</a>
+<a class="sourceLine" id="cb17-3" title="3">    <span class="dt">color =</span> Petal.Width)</a></code></pre></div>
+<div id="htmlwidget-0175064ee437abaab5df" style="width:672px;height:480px;" class="rbokeh html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0175064ee437abaab5df">{"x":{"elementid":"5db90290454c13451d7157bc121582c8","modeltype":"Plot","modelid":"925b64d023826c4e94cf4cdf48b0842c","docid":"9dab90ba9b60c5a91528b618a5a704da","docs_json":{"9dab90ba9b60c5a91528b618a5a704da":{"version":"0.12.5","title":"Bokeh Figure","roots":{"root_ids":["925b64d023826c4e94cf4cdf48b0842c"],"references":[{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","attributes":{"id":"925b64d023826c4e94cf4cdf48b0842c","sizing_mode":"scale_both","x_range":{"type":"Range1d","id":"50bc503d5b70476f7daafc5f4437db1b"},"y_range":{"type":"Range1d","id":"36f60e1a79cffe6e3c6f3c783fe6c47d"},"left":[{"type":"LinearAxis","id":"300d3f1bbeac8e58b3aedd18c5dff88a"}],"below":[{"type":"LinearAxis","id":"f1d864b1798916729d82177a53dc3bb0"}],"right":[],"above":[],"renderers":[{"type":"BoxAnnotation","id":"9d156070cabfe3311acd662742747922"},{"type":"GlyphRenderer","id":"9623259b5a8cd0583863860aee5288f6"},{"type":"GlyphRenderer","id":"8e8166ef94ad815d582d6d6044cb0feb"},{"type":"GlyphRenderer","id":"a76dd85de87c6f29ea43b1d4c64f5bf0"},{"type":"GlyphRenderer","id":"46c8382845d2ba239eb3fa3ae9184b18"},{"type":"GlyphRenderer","id":"9ce532f9730a8a0db3cae1b0f5a05176"},{"type":"GlyphRenderer","id":"31bbb508b855ad8c3607c9b466c67f94"},{"type":"Legend","id":"12d8163383f7c5882f38cb907980ee2a"},{"type":"LinearAxis","id":"f1d864b1798916729d82177a53dc3bb0"},{"type":"Grid","id":"95cdb47658496f799f96fe4b66a51731"},{"type":"LinearAxis","id":"300d3f1bbeac8e58b3aedd18c5dff88a"},{"type":"Grid","id":"95dbe6dc33ca882feea559335adba012"}],"extra_y_ranges":{},"extra_x_ranges":{},"tags":[],"min_border_left":4,"min_border_right":4,"min_border_top":4,"min_border_bottom":4,"lod_threshold":null,"toolbar":{"type":"Toolbar","id":"a3f4a8d1c1b81f820034800b25405c2e"},"tool_events":{"type":"ToolEvents","id":"cc1e37ff7b18f08966b2c58f81f859a1"}},"subtype":"Figure"},{"type":"Toolbar","id":"a3f4a8d1c1b81f820034800b25405c2e","attributes":{"id":"a3f4a8d1c1b81f820034800b25405c2e","tags":[],"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"type":"PanTool","id":"ac3a30efba0ad8b3e07906fb5a9707fb"},{"type":"WheelZoomTool","id":"53b34e9a3d20d450afaf16797fd5c3ce"},{"type":"BoxZoomTool","id":"0a2d4298a7a09978138eb587229fe479"},{"type":"ResetTool","id":"faad10439536a754e21637a1f0e0baa5"},{"type":"SaveTool","id":"05428c3bc2910d7d0e80244e1c752ae4"},{"type":"HelpTool","id":"9d7756e0bbe4ad719198f6d645c4b2ef"}],"logo":null}},{"type":"PanTool","id":"ac3a30efba0ad8b3e07906fb5a9707fb","attributes":{"id":"ac3a30efba0ad8b3e07906fb5a9707fb","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"dimensions":"both"}},{"type":"ToolEvents","id":"cc1e37ff7b18f08966b2c58f81f859a1","attributes":{"id":"cc1e37ff7b18f08966b2c58f81f859a1","tags":[]},"geometries":[]},{"type":"WheelZoomTool","id":"53b34e9a3d20d450afaf16797fd5c3ce","attributes":{"id":"53b34e9a3d20d450afaf16797fd5c3ce","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"dimensions":"both"}},{"type":"BoxAnnotation","id":"9d156070cabfe3311acd662742747922","attributes":{"id":"9d156070cabfe3311acd662742747922","tags":[],"line_color":{"units":"data","value":"black"},"line_alpha":{"units":"data","value":1},"fill_color":{"units":"data","value":"lightgrey"},"fill_alpha":{"units":"data","value":0.5},"line_dash":[4,4],"line_width":{"units":"data","value":2},"level":"overlay","top_units":"screen","bottom_units":"screen","left_units":"screen","right_units":"screen","render_mode":"css"}},{"type":"BoxZoomTool","id":"0a2d4298a7a09978138eb587229fe479","attributes":{"id":"0a2d4298a7a09978138eb587229fe479","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"overlay":{"type":"BoxAnnotation","id":"9d156070cabfe3311acd662742747922"}}},{"type":"ResetTool","id":"faad10439536a754e21637a1f0e0baa5","attributes":{"id":"faad10439536a754e21637a1f0e0baa5","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"}}},{"type":"SaveTool","id":"05428c3bc2910d7d0e80244e1c752ae4","attributes":{"id":"05428c3bc2910d7d0e80244e1c752ae4","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"}}},{"type":"HelpTool","id":"9d7756e0bbe4ad719198f6d645c4b2ef","attributes":{"id":"9d7756e0bbe4ad719198f6d645c4b2ef","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"redirect":"https://hafen.github.io/rbokeh","help_tooltip":"Click to learn more about rbokeh."}},{"type":"ColumnDataSource","id":"f6a84fe9a80f45af34c9205f02efb0e3","attributes":{"id":"f6a84fe9a80f45af34c9205f02efb0e3","tags":[],"column_names":["x","y","line_color","fill_color"],"selected":[],"data":{"x":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5,7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7,6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"y":[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3,3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8,3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],"line_color":["#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#41AE76","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#006D2C","#41AE76","#238B45","#238B45","#41AE76","#238B45","#41AE76","#238B45","#238B45","#238B45","#238B45","#41AE76","#238B45","#238B45","#006D2C","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#006D2C","#238B45","#41AE76","#238B45","#41AE76","#238B45","#006D2C","#238B45","#006D2C","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#41AE76","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#00441B","#006D2C","#00441B","#006D2C","#00441B","#00441B","#006D2C","#006D2C","#006D2C","#00441B","#006D2C","#006D2C","#00441B","#006D2C","#00441B","#00441B","#006D2C","#00441B","#00441B","#238B45","#00441B","#006D2C","#006D2C","#006D2C","#00441B","#006D2C","#006D2C","#006D2C","#00441B","#006D2C","#006D2C","#006D2C","#00441B","#238B45","#238B45","#00441B","#00441B","#006D2C","#006D2C","#00441B","#00441B","#00441B","#006D2C","#00441B","#00441B","#00441B","#006D2C","#006D2C","#00441B","#006D2C"],"fill_color":["#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#41AE76","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#66C2A4","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#006D2C","#41AE76","#238B45","#238B45","#41AE76","#238B45","#41AE76","#238B45","#238B45","#238B45","#238B45","#41AE76","#238B45","#238B45","#006D2C","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#006D2C","#238B45","#41AE76","#238B45","#41AE76","#238B45","#006D2C","#238B45","#006D2C","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#41AE76","#238B45","#238B45","#238B45","#238B45","#238B45","#238B45","#00441B","#006D2C","#00441B","#006D2C","#00441B","#00441B","#006D2C","#006D2C","#006D2C","#00441B","#006D2C","#006D2C","#00441B","#006D2C","#00441B","#00441B","#006D2C","#00441B","#00441B","#238B45","#00441B","#006D2C","#006D2C","#006D2C","#00441B","#006D2C","#006D2C","#006D2C","#00441B","#006D2C","#006D2C","#006D2C","#00441B","#238B45","#238B45","#00441B","#00441B","#006D2C","#006D2C","#00441B","#00441B","#00441B","#006D2C","#00441B","#00441B","#00441B","#006D2C","#006D2C","#00441B","#006D2C"]}}},{"type":"Circle","id":"3ddd2470387bda5668068fdca67bc984","attributes":{"id":"3ddd2470387bda5668068fdca67bc984","tags":[],"size":{"units":"screen","value":10},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"Circle","id":"60ea1f00ea844cc1734220e068a57585","attributes":{"id":"60ea1f00ea844cc1734220e068a57585","tags":[],"size":{"units":"screen","value":10},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"}}},{"type":"Circle","id":"dc2d9f6694455ce0cc43fbc8ee3b2e9e","attributes":{"id":"dc2d9f6694455ce0cc43fbc8ee3b2e9e","tags":[],"size":{"units":"screen","value":10},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"GlyphRenderer","id":"9623259b5a8cd0583863860aee5288f6","attributes":{"id":"9623259b5a8cd0583863860aee5288f6","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"60ea1f00ea844cc1734220e068a57585"},"hover_glyph":{"type":"Circle","id":"dc2d9f6694455ce0cc43fbc8ee3b2e9e"},"name":null,"data_source":{"type":"ColumnDataSource","id":"f6a84fe9a80f45af34c9205f02efb0e3"},"glyph":{"type":"Circle","id":"3ddd2470387bda5668068fdca67bc984"}}},{"type":"ColumnDataSource","id":"003d30a8d2250bbbfe54526395c95a10","attributes":{"id":"003d30a8d2250bbbfe54526395c95a10","tags":[],"column_names":["x","y"],"selected":[],"data":{"x":[null,null],"y":[null,null]}}},{"type":"Circle","id":"394962a6b769bb0e80b7628e50667905","attributes":{"id":"394962a6b769bb0e80b7628e50667905","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#66C2A4"},"fill_color":{"units":"data","value":"#66C2A4"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"d157c938a178949b129a17b683d7cfd0","attributes":{"id":"d157c938a178949b129a17b683d7cfd0","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"0b3d94a1ceb351d29b87a9a7277fda8f","attributes":{"id":"0b3d94a1ceb351d29b87a9a7277fda8f","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#66C2A4"},"fill_color":{"units":"data","value":"#66C2A4"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"8e8166ef94ad815d582d6d6044cb0feb","attributes":{"id":"8e8166ef94ad815d582d6d6044cb0feb","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"d157c938a178949b129a17b683d7cfd0"},"hover_glyph":{"type":"Circle","id":"0b3d94a1ceb351d29b87a9a7277fda8f"},"name":null,"data_source":{"type":"ColumnDataSource","id":"003d30a8d2250bbbfe54526395c95a10"},"glyph":{"type":"Circle","id":"394962a6b769bb0e80b7628e50667905"}}},{"type":"Circle","id":"83edec1354ed4c6d324d0b0156989318","attributes":{"id":"83edec1354ed4c6d324d0b0156989318","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#41AE76"},"fill_color":{"units":"data","value":"#41AE76"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"94852698f3ca55dec9e60023bcac7b27","attributes":{"id":"94852698f3ca55dec9e60023bcac7b27","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"92ee851ee28b621905a6a0c3a8002da9","attributes":{"id":"92ee851ee28b621905a6a0c3a8002da9","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#41AE76"},"fill_color":{"units":"data","value":"#41AE76"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"a76dd85de87c6f29ea43b1d4c64f5bf0","attributes":{"id":"a76dd85de87c6f29ea43b1d4c64f5bf0","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"94852698f3ca55dec9e60023bcac7b27"},"hover_glyph":{"type":"Circle","id":"92ee851ee28b621905a6a0c3a8002da9"},"name":null,"data_source":{"type":"ColumnDataSource","id":"003d30a8d2250bbbfe54526395c95a10"},"glyph":{"type":"Circle","id":"83edec1354ed4c6d324d0b0156989318"}}},{"type":"Circle","id":"32898de90fb36a8e2b0237f4c33cf730","attributes":{"id":"32898de90fb36a8e2b0237f4c33cf730","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#238B45"},"fill_color":{"units":"data","value":"#238B45"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"e584fe082b80358203a318a357da265a","attributes":{"id":"e584fe082b80358203a318a357da265a","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"f09850c3d0017c6989f77bfa7c06b6ea","attributes":{"id":"f09850c3d0017c6989f77bfa7c06b6ea","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#238B45"},"fill_color":{"units":"data","value":"#238B45"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"46c8382845d2ba239eb3fa3ae9184b18","attributes":{"id":"46c8382845d2ba239eb3fa3ae9184b18","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"e584fe082b80358203a318a357da265a"},"hover_glyph":{"type":"Circle","id":"f09850c3d0017c6989f77bfa7c06b6ea"},"name":null,"data_source":{"type":"ColumnDataSource","id":"003d30a8d2250bbbfe54526395c95a10"},"glyph":{"type":"Circle","id":"32898de90fb36a8e2b0237f4c33cf730"}}},{"type":"Circle","id":"54d2099d0c8054fa41792b663038164e","attributes":{"id":"54d2099d0c8054fa41792b663038164e","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#006D2C"},"fill_color":{"units":"data","value":"#006D2C"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"f049d0ea3dfaf5f3657e3a28ef4703d9","attributes":{"id":"f049d0ea3dfaf5f3657e3a28ef4703d9","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"46a3c2dbd4b7f94218ae8a95be35b210","attributes":{"id":"46a3c2dbd4b7f94218ae8a95be35b210","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#006D2C"},"fill_color":{"units":"data","value":"#006D2C"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"9ce532f9730a8a0db3cae1b0f5a05176","attributes":{"id":"9ce532f9730a8a0db3cae1b0f5a05176","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"f049d0ea3dfaf5f3657e3a28ef4703d9"},"hover_glyph":{"type":"Circle","id":"46a3c2dbd4b7f94218ae8a95be35b210"},"name":null,"data_source":{"type":"ColumnDataSource","id":"003d30a8d2250bbbfe54526395c95a10"},"glyph":{"type":"Circle","id":"54d2099d0c8054fa41792b663038164e"}}},{"type":"Circle","id":"8c6d72445bd99570efa3d1f5933f58b0","attributes":{"id":"8c6d72445bd99570efa3d1f5933f58b0","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#00441B"},"fill_color":{"units":"data","value":"#00441B"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"b7afa23163bdcf1dceac37129fe99ebd","attributes":{"id":"b7afa23163bdcf1dceac37129fe99ebd","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"7e96139cc785610745e5a27067b415f9","attributes":{"id":"7e96139cc785610745e5a27067b415f9","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#00441B"},"fill_color":{"units":"data","value":"#00441B"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"31bbb508b855ad8c3607c9b466c67f94","attributes":{"id":"31bbb508b855ad8c3607c9b466c67f94","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"b7afa23163bdcf1dceac37129fe99ebd"},"hover_glyph":{"type":"Circle","id":"7e96139cc785610745e5a27067b415f9"},"name":null,"data_source":{"type":"ColumnDataSource","id":"003d30a8d2250bbbfe54526395c95a10"},"glyph":{"type":"Circle","id":"8c6d72445bd99570efa3d1f5933f58b0"}}},{"type":"LegendItem","id":"febb32f89a5e36231ff7072a26c93002","attributes":{"id":"febb32f89a5e36231ff7072a26c93002","tags":[],"label":{"value":"Petal.Width"},"renderers":[]}},{"type":"LegendItem","id":"cb2f2c122687276158f5c02a3e6ee4e0","attributes":{"id":"cb2f2c122687276158f5c02a3e6ee4e0","tags":[],"label":{"value":" [0,0.5]"},"renderers":[{"type":"GlyphRenderer","id":"8e8166ef94ad815d582d6d6044cb0feb"}]}},{"type":"LegendItem","id":"61f2a10f47127b2a5f5ff369bced3d3e","attributes":{"id":"61f2a10f47127b2a5f5ff369bced3d3e","tags":[],"label":{"value":" (0.5,1]"},"renderers":[{"type":"GlyphRenderer","id":"a76dd85de87c6f29ea43b1d4c64f5bf0"}]}},{"type":"LegendItem","id":"e795a910733bf9830e0d7ebf7d8a6d5e","attributes":{"id":"e795a910733bf9830e0d7ebf7d8a6d5e","tags":[],"label":{"value":" (1,1.5]"},"renderers":[{"type":"GlyphRenderer","id":"46c8382845d2ba239eb3fa3ae9184b18"}]}},{"type":"LegendItem","id":"ab70aba1ab6e7f5224ce2ac7454f5c77","attributes":{"id":"ab70aba1ab6e7f5224ce2ac7454f5c77","tags":[],"label":{"value":" (1.5,2]"},"renderers":[{"type":"GlyphRenderer","id":"9ce532f9730a8a0db3cae1b0f5a05176"}]}},{"type":"LegendItem","id":"e51d9237f05059522140987505f518d6","attributes":{"id":"e51d9237f05059522140987505f518d6","tags":[],"label":{"value":" (2,2.5]"},"renderers":[{"type":"GlyphRenderer","id":"31bbb508b855ad8c3607c9b466c67f94"}]}},{"type":"Legend","id":"12d8163383f7c5882f38cb907980ee2a","attributes":{"id":"12d8163383f7c5882f38cb907980ee2a","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"items":[{"type":"LegendItem","id":"febb32f89a5e36231ff7072a26c93002"},{"type":"LegendItem","id":"cb2f2c122687276158f5c02a3e6ee4e0"},{"type":"LegendItem","id":"61f2a10f47127b2a5f5ff369bced3d3e"},{"type":"LegendItem","id":"e795a910733bf9830e0d7ebf7d8a6d5e"},{"type":"LegendItem","id":"ab70aba1ab6e7f5224ce2ac7454f5c77"},{"type":"LegendItem","id":"e51d9237f05059522140987505f518d6"}],"location":"top_right"}},{"type":"Range1d","id":"50bc503d5b70476f7daafc5f4437db1b","attributes":{"id":"50bc503d5b70476f7daafc5f4437db1b","tags":[],"start":4.048,"end":8.152}},{"type":"Range1d","id":"36f60e1a79cffe6e3c6f3c783fe6c47d","attributes":{"id":"36f60e1a79cffe6e3c6f3c783fe6c47d","tags":[],"start":1.832,"end":4.568}},{"type":"LinearAxis","id":"f1d864b1798916729d82177a53dc3bb0","attributes":{"id":"f1d864b1798916729d82177a53dc3bb0","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"axis_label":"Sepal.Length","formatter":{"type":"BasicTickFormatter","id":"9a7db37068428f2e5900eed254e4ba69"},"ticker":{"type":"BasicTicker","id":"5ec9eca057bd2a3d188b15d729b11565"},"visible":true,"axis_label_text_font_size":"12pt"}},{"type":"BasicTickFormatter","id":"9a7db37068428f2e5900eed254e4ba69","attributes":{"id":"9a7db37068428f2e5900eed254e4ba69","tags":[]}},{"type":"BasicTicker","id":"5ec9eca057bd2a3d188b15d729b11565","attributes":{"id":"5ec9eca057bd2a3d188b15d729b11565","tags":[],"num_minor_ticks":5}},{"type":"Grid","id":"95cdb47658496f799f96fe4b66a51731","attributes":{"id":"95cdb47658496f799f96fe4b66a51731","tags":[],"dimension":0,"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"ticker":{"type":"BasicTicker","id":"5ec9eca057bd2a3d188b15d729b11565"}}},{"type":"LinearAxis","id":"300d3f1bbeac8e58b3aedd18c5dff88a","attributes":{"id":"300d3f1bbeac8e58b3aedd18c5dff88a","tags":[],"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"axis_label":"Sepal.Width","formatter":{"type":"BasicTickFormatter","id":"075c15cf6d64e22477cdf492c3365c97"},"ticker":{"type":"BasicTicker","id":"7d510408a541480cb56ea36c018c9b27"},"visible":true,"axis_label_text_font_size":"12pt"}},{"type":"BasicTickFormatter","id":"075c15cf6d64e22477cdf492c3365c97","attributes":{"id":"075c15cf6d64e22477cdf492c3365c97","tags":[]}},{"type":"BasicTicker","id":"7d510408a541480cb56ea36c018c9b27","attributes":{"id":"7d510408a541480cb56ea36c018c9b27","tags":[],"num_minor_ticks":5}},{"type":"Grid","id":"95dbe6dc33ca882feea559335adba012","attributes":{"id":"95dbe6dc33ca882feea559335adba012","tags":[],"dimension":1,"plot":{"type":"Plot","id":"925b64d023826c4e94cf4cdf48b0842c","subtype":"Figure"},"ticker":{"type":"BasicTicker","id":"7d510408a541480cb56ea36c018c9b27"}}}]}}},"debug":false},"evals":[],"jsHooks":[]}</script>
+
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="species-quantile.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/DataFestUofT/submit-project-data-machine/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

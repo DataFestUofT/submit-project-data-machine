@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.1 Species | DataFest - Data Machine Team</title>
+  <meta name="description" content="1.1 Species | DataFest - Data Machine Team" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.1 Species | DataFest - Data Machine Team" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="DataFestUofT/submit-project-data-machine" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.1 Species | DataFest - Data Machine Team" />
+  
+  
+  
+
+<meta name="author" content="Jose M Casas, Meria Djirar, Anna Lai,and Xiaoxiao Wu" />
+
+
+<meta name="date" content="2020-06-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="interactive-elements.html"/>
+<link rel="next" href="column.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/bokehjs-0.12.5/bokeh.min.css" rel="stylesheet" />
+<link href="libs/bokehjs-0.12.5/loader.css" rel="stylesheet" />
+<script src="libs/bokehjs-0.12.5/bokeh.min.js"></script>
+<script src="libs/rbokeh-binding-0.5.1/rbokeh.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\box.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">DataFest2020:Data Machine Team</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>DataFest 2020 Summer Project presented by Data Machine Team</a><ul>
+<li class="chapter" data-level="" data-path="sections.html"><a href="sections.html"><i class="fa fa-check"></i>Name/ Title of our project</a></li>
+<li class="chapter" data-level="" data-path="indoor-phyiscal-activity.html"><a href="indoor-phyiscal-activity.html"><i class="fa fa-check"></i>Indoor phyiscal activity</a></li>
+<li class="chapter" data-level="" data-path="outdoor-activities.html"><a href="outdoor-activities.html"><i class="fa fa-check"></i>Outdoor activities</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="interactive-elements.html"><a href="interactive-elements.html"><i class="fa fa-check"></i><b>1</b> Interactive elements</a><ul>
+<li class="chapter" data-level="1.1" data-path="species.html"><a href="species.html"><i class="fa fa-check"></i><b>1.1</b> Species</a></li>
+<li class="chapter" data-level="1.2" data-path="column.html"><a href="column.html"><i class="fa fa-check"></i><b>1.2</b> Column</a></li>
+<li class="chapter" data-level="1.3" data-path="species-quantile.html"><a href="species-quantile.html"><i class="fa fa-check"></i><b>1.3</b> Species (Quantile)</a></li>
+<li class="chapter" data-level="1.4" data-path="petal-width.html"><a href="petal-width.html"><i class="fa fa-check"></i><b>1.4</b> Petal Width</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DataFest - Data Machine Team</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="species" class="section level2">
+<h2><span class="header-section-number">1.1</span> Species</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">library</span>(rbokeh)</a></code></pre></div>
+<pre><code>## Warning: package &#39;rbokeh&#39; was built under R version 3.6.3</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;pryr&#39;:
+##   method      from
+##   print.bytes Rcpp</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">figure</span>(<span class="dt">width =</span> <span class="ot">NULL</span>, <span class="dt">height =</span> <span class="ot">NULL</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="st">  </span><span class="kw">ly_points</span>(Sepal.Length, Sepal.Width, <span class="dt">data =</span> iris, <span class="dt">color =</span> Species)</a></code></pre></div>
+<div id="htmlwidget-2c7319dd83dcfb6b7401" style="width:672px;height:480px;" class="rbokeh html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2c7319dd83dcfb6b7401">{"x":{"elementid":"79a05a2146e7cffef42bc6d6a7963921","modeltype":"Plot","modelid":"e5b145ae72e69b7abcc0effef2b594c8","docid":"9dab90ba9b60c5a91528b618a5a704da","docs_json":{"9dab90ba9b60c5a91528b618a5a704da":{"version":"0.12.5","title":"Bokeh Figure","roots":{"root_ids":["e5b145ae72e69b7abcc0effef2b594c8"],"references":[{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","attributes":{"id":"e5b145ae72e69b7abcc0effef2b594c8","sizing_mode":"scale_both","x_range":{"type":"Range1d","id":"d39d3a0bcaad5398ca07cf0d00b202c8"},"y_range":{"type":"Range1d","id":"2a4918a8bbcfd94f53af28edac6dd2f6"},"left":[{"type":"LinearAxis","id":"a9d39dcd67a453cb071fcfa15d70cca4"}],"below":[{"type":"LinearAxis","id":"fe84860e06246028548dcfb95cf0c52a"}],"right":[],"above":[],"renderers":[{"type":"BoxAnnotation","id":"0c14d3d46362b4abd69e55bf4e20a65f"},{"type":"GlyphRenderer","id":"00e0f7b32674df2a633a12cf73b11659"},{"type":"GlyphRenderer","id":"424a6078115be991e40380f16975bb2d"},{"type":"GlyphRenderer","id":"971a0421751e7873c71840fa1175f089"},{"type":"GlyphRenderer","id":"9c5ca41505907a368982d762dbc51fcf"},{"type":"Legend","id":"a8fa6789f4964681bc0d43249f1b4e1d"},{"type":"LinearAxis","id":"fe84860e06246028548dcfb95cf0c52a"},{"type":"Grid","id":"32a756f029a467e45294b2ff11f72bb0"},{"type":"LinearAxis","id":"a9d39dcd67a453cb071fcfa15d70cca4"},{"type":"Grid","id":"df521f94889405541f209ce6d896963f"}],"extra_y_ranges":{},"extra_x_ranges":{},"tags":[],"min_border_left":4,"min_border_right":4,"min_border_top":4,"min_border_bottom":4,"lod_threshold":null,"toolbar":{"type":"Toolbar","id":"09b9e0b590df24859ebc0eea0e4d18f4"},"tool_events":{"type":"ToolEvents","id":"77b6e07c72e9a5eb5d2c48aee1ce39b5"}},"subtype":"Figure"},{"type":"Toolbar","id":"09b9e0b590df24859ebc0eea0e4d18f4","attributes":{"id":"09b9e0b590df24859ebc0eea0e4d18f4","tags":[],"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"type":"PanTool","id":"9f14ef0ca0a3611eb5eb7bf59eb386ff"},{"type":"WheelZoomTool","id":"340f4a945017dd3f3815eec97e6bb9e0"},{"type":"BoxZoomTool","id":"b44da0e4935afb488819b40463d7f800"},{"type":"ResetTool","id":"24a79f552d27121c2ab9454dde050172"},{"type":"SaveTool","id":"cea7aed0bea28c40b9d62a53c27bc62f"},{"type":"HelpTool","id":"b57cd34f1407e1b73cd7062bb7bbb2bc"}],"logo":null}},{"type":"PanTool","id":"9f14ef0ca0a3611eb5eb7bf59eb386ff","attributes":{"id":"9f14ef0ca0a3611eb5eb7bf59eb386ff","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"dimensions":"both"}},{"type":"ToolEvents","id":"77b6e07c72e9a5eb5d2c48aee1ce39b5","attributes":{"id":"77b6e07c72e9a5eb5d2c48aee1ce39b5","tags":[]},"geometries":[]},{"type":"WheelZoomTool","id":"340f4a945017dd3f3815eec97e6bb9e0","attributes":{"id":"340f4a945017dd3f3815eec97e6bb9e0","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"dimensions":"both"}},{"type":"BoxAnnotation","id":"0c14d3d46362b4abd69e55bf4e20a65f","attributes":{"id":"0c14d3d46362b4abd69e55bf4e20a65f","tags":[],"line_color":{"units":"data","value":"black"},"line_alpha":{"units":"data","value":1},"fill_color":{"units":"data","value":"lightgrey"},"fill_alpha":{"units":"data","value":0.5},"line_dash":[4,4],"line_width":{"units":"data","value":2},"level":"overlay","top_units":"screen","bottom_units":"screen","left_units":"screen","right_units":"screen","render_mode":"css"}},{"type":"BoxZoomTool","id":"b44da0e4935afb488819b40463d7f800","attributes":{"id":"b44da0e4935afb488819b40463d7f800","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"overlay":{"type":"BoxAnnotation","id":"0c14d3d46362b4abd69e55bf4e20a65f"}}},{"type":"ResetTool","id":"24a79f552d27121c2ab9454dde050172","attributes":{"id":"24a79f552d27121c2ab9454dde050172","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"}}},{"type":"SaveTool","id":"cea7aed0bea28c40b9d62a53c27bc62f","attributes":{"id":"cea7aed0bea28c40b9d62a53c27bc62f","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"}}},{"type":"HelpTool","id":"b57cd34f1407e1b73cd7062bb7bbb2bc","attributes":{"id":"b57cd34f1407e1b73cd7062bb7bbb2bc","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"redirect":"https://hafen.github.io/rbokeh","help_tooltip":"Click to learn more about rbokeh."}},{"type":"ColumnDataSource","id":"6d984f054f238d259aa3f8911966d552","attributes":{"id":"6d984f054f238d259aa3f8911966d552","tags":[],"column_names":["x","y","line_color","fill_color"],"selected":[],"data":{"x":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5,7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7,6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"y":[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3,3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8,3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],"line_color":["#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C"],"fill_color":["#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#1F77B4","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#FF7F0E","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C","#2CA02C"]}}},{"type":"Circle","id":"0f0a68ffc16ed89e045d7d8bf2149228","attributes":{"id":"0f0a68ffc16ed89e045d7d8bf2149228","tags":[],"size":{"units":"screen","value":10},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"Circle","id":"1ecc5c15dd8b8812903d4bb38acb5228","attributes":{"id":"1ecc5c15dd8b8812903d4bb38acb5228","tags":[],"size":{"units":"screen","value":10},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"}}},{"type":"Circle","id":"0d88a2296d11376f75515fe1e8c93534","attributes":{"id":"0d88a2296d11376f75515fe1e8c93534","tags":[],"size":{"units":"screen","value":10},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"},"line_color":{"units":"data","field":"line_color"},"fill_color":{"units":"data","field":"fill_color"}}},{"type":"GlyphRenderer","id":"00e0f7b32674df2a633a12cf73b11659","attributes":{"id":"00e0f7b32674df2a633a12cf73b11659","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"1ecc5c15dd8b8812903d4bb38acb5228"},"hover_glyph":{"type":"Circle","id":"0d88a2296d11376f75515fe1e8c93534"},"name":null,"data_source":{"type":"ColumnDataSource","id":"6d984f054f238d259aa3f8911966d552"},"glyph":{"type":"Circle","id":"0f0a68ffc16ed89e045d7d8bf2149228"}}},{"type":"ColumnDataSource","id":"56e0d9a21df5a3facf7346298897e423","attributes":{"id":"56e0d9a21df5a3facf7346298897e423","tags":[],"column_names":["x","y"],"selected":[],"data":{"x":[null,null],"y":[null,null]}}},{"type":"Circle","id":"3499c6bb5fa359169191e497c0dd3380","attributes":{"id":"3499c6bb5fa359169191e497c0dd3380","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#1F77B4"},"fill_color":{"units":"data","value":"#1F77B4"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"183634a417da2a47a4e779180cc2f543","attributes":{"id":"183634a417da2a47a4e779180cc2f543","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"f6c99d0192c2374664a2f9e7091365f8","attributes":{"id":"f6c99d0192c2374664a2f9e7091365f8","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#1F77B4"},"fill_color":{"units":"data","value":"#1F77B4"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"424a6078115be991e40380f16975bb2d","attributes":{"id":"424a6078115be991e40380f16975bb2d","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"183634a417da2a47a4e779180cc2f543"},"hover_glyph":{"type":"Circle","id":"f6c99d0192c2374664a2f9e7091365f8"},"name":null,"data_source":{"type":"ColumnDataSource","id":"56e0d9a21df5a3facf7346298897e423"},"glyph":{"type":"Circle","id":"3499c6bb5fa359169191e497c0dd3380"}}},{"type":"Circle","id":"298628818053e8b666093a84d9151542","attributes":{"id":"298628818053e8b666093a84d9151542","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#FF7F0E"},"fill_color":{"units":"data","value":"#FF7F0E"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"1d942690875ff68e7cd04d11728befaf","attributes":{"id":"1d942690875ff68e7cd04d11728befaf","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"54c22685a75fcd94c80c484a388ddf1e","attributes":{"id":"54c22685a75fcd94c80c484a388ddf1e","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#FF7F0E"},"fill_color":{"units":"data","value":"#FF7F0E"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"971a0421751e7873c71840fa1175f089","attributes":{"id":"971a0421751e7873c71840fa1175f089","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"1d942690875ff68e7cd04d11728befaf"},"hover_glyph":{"type":"Circle","id":"54c22685a75fcd94c80c484a388ddf1e"},"name":null,"data_source":{"type":"ColumnDataSource","id":"56e0d9a21df5a3facf7346298897e423"},"glyph":{"type":"Circle","id":"298628818053e8b666093a84d9151542"}}},{"type":"Circle","id":"80477a838209418001d6023bd21ff698","attributes":{"id":"80477a838209418001d6023bd21ff698","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#2CA02C"},"fill_color":{"units":"data","value":"#2CA02C"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"bc0817fe265e0627ac67ba79d997c584","attributes":{"id":"bc0817fe265e0627ac67ba79d997c584","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":0.5},"line_color":{"units":"data","value":"#e1e1e1"},"fill_color":{"units":"data","value":"#e1e1e1"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"Circle","id":"812f568d9c6d795c3db6779c6cb533b2","attributes":{"id":"812f568d9c6d795c3db6779c6cb533b2","tags":[],"size":{"units":"screen","value":0},"line_alpha":{"units":"data","value":1},"fill_alpha":{"units":"data","value":1},"line_color":{"units":"data","value":"#2CA02C"},"fill_color":{"units":"data","value":"#2CA02C"},"x":{"units":"data","field":"x"},"y":{"units":"data","field":"y"}}},{"type":"GlyphRenderer","id":"9c5ca41505907a368982d762dbc51fcf","attributes":{"id":"9c5ca41505907a368982d762dbc51fcf","tags":[],"selection_glyph":null,"nonselection_glyph":{"type":"Circle","id":"bc0817fe265e0627ac67ba79d997c584"},"hover_glyph":{"type":"Circle","id":"812f568d9c6d795c3db6779c6cb533b2"},"name":null,"data_source":{"type":"ColumnDataSource","id":"56e0d9a21df5a3facf7346298897e423"},"glyph":{"type":"Circle","id":"80477a838209418001d6023bd21ff698"}}},{"type":"LegendItem","id":"d6b1d626d8fb8778c34f11503df58528","attributes":{"id":"d6b1d626d8fb8778c34f11503df58528","tags":[],"label":{"value":"Species"},"renderers":[]}},{"type":"LegendItem","id":"996bf7b06a67b22be7c11832d817c73b","attributes":{"id":"996bf7b06a67b22be7c11832d817c73b","tags":[],"label":{"value":" setosa"},"renderers":[{"type":"GlyphRenderer","id":"424a6078115be991e40380f16975bb2d"}]}},{"type":"LegendItem","id":"36c373997c1210493435ea2dde15f8f0","attributes":{"id":"36c373997c1210493435ea2dde15f8f0","tags":[],"label":{"value":" versicolor"},"renderers":[{"type":"GlyphRenderer","id":"971a0421751e7873c71840fa1175f089"}]}},{"type":"LegendItem","id":"3c77fbc24e0f896c4a3255bc74e5247b","attributes":{"id":"3c77fbc24e0f896c4a3255bc74e5247b","tags":[],"label":{"value":" virginica"},"renderers":[{"type":"GlyphRenderer","id":"9c5ca41505907a368982d762dbc51fcf"}]}},{"type":"Legend","id":"a8fa6789f4964681bc0d43249f1b4e1d","attributes":{"id":"a8fa6789f4964681bc0d43249f1b4e1d","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"items":[{"type":"LegendItem","id":"d6b1d626d8fb8778c34f11503df58528"},{"type":"LegendItem","id":"996bf7b06a67b22be7c11832d817c73b"},{"type":"LegendItem","id":"36c373997c1210493435ea2dde15f8f0"},{"type":"LegendItem","id":"3c77fbc24e0f896c4a3255bc74e5247b"}],"location":"top_right"}},{"type":"Range1d","id":"d39d3a0bcaad5398ca07cf0d00b202c8","attributes":{"id":"d39d3a0bcaad5398ca07cf0d00b202c8","tags":[],"start":4.048,"end":8.152}},{"type":"Range1d","id":"2a4918a8bbcfd94f53af28edac6dd2f6","attributes":{"id":"2a4918a8bbcfd94f53af28edac6dd2f6","tags":[],"start":1.832,"end":4.568}},{"type":"LinearAxis","id":"fe84860e06246028548dcfb95cf0c52a","attributes":{"id":"fe84860e06246028548dcfb95cf0c52a","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"axis_label":"Sepal.Length","formatter":{"type":"BasicTickFormatter","id":"da03d6183bbac5ed61c4e82a9e3260b4"},"ticker":{"type":"BasicTicker","id":"da0602c06c5978e01692604099878bbd"},"visible":true,"axis_label_text_font_size":"12pt"}},{"type":"BasicTickFormatter","id":"da03d6183bbac5ed61c4e82a9e3260b4","attributes":{"id":"da03d6183bbac5ed61c4e82a9e3260b4","tags":[]}},{"type":"BasicTicker","id":"da0602c06c5978e01692604099878bbd","attributes":{"id":"da0602c06c5978e01692604099878bbd","tags":[],"num_minor_ticks":5}},{"type":"Grid","id":"32a756f029a467e45294b2ff11f72bb0","attributes":{"id":"32a756f029a467e45294b2ff11f72bb0","tags":[],"dimension":0,"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"ticker":{"type":"BasicTicker","id":"da0602c06c5978e01692604099878bbd"}}},{"type":"LinearAxis","id":"a9d39dcd67a453cb071fcfa15d70cca4","attributes":{"id":"a9d39dcd67a453cb071fcfa15d70cca4","tags":[],"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"axis_label":"Sepal.Width","formatter":{"type":"BasicTickFormatter","id":"39376eccf5e63a05ececfe0cbe7f0aeb"},"ticker":{"type":"BasicTicker","id":"87ac66461b5cbef3856f6d8d1b867823"},"visible":true,"axis_label_text_font_size":"12pt"}},{"type":"BasicTickFormatter","id":"39376eccf5e63a05ececfe0cbe7f0aeb","attributes":{"id":"39376eccf5e63a05ececfe0cbe7f0aeb","tags":[]}},{"type":"BasicTicker","id":"87ac66461b5cbef3856f6d8d1b867823","attributes":{"id":"87ac66461b5cbef3856f6d8d1b867823","tags":[],"num_minor_ticks":5}},{"type":"Grid","id":"df521f94889405541f209ce6d896963f","attributes":{"id":"df521f94889405541f209ce6d896963f","tags":[],"dimension":1,"plot":{"type":"Plot","id":"e5b145ae72e69b7abcc0effef2b594c8","subtype":"Figure"},"ticker":{"type":"BasicTicker","id":"87ac66461b5cbef3856f6d8d1b867823"}}}]}}},"debug":false},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="co"># figure() %&gt;%</span></a>
+<a class="sourceLine" id="cb15-2" title="2"><span class="co">#   ly_points(Sepal.Length, Sepal.Width, data = iris,</span></a>
+<a class="sourceLine" id="cb15-3" title="3"><span class="co">#     color = Species, glyph = Species)</span></a></code></pre></div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="interactive-elements.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="column.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/DataFestUofT/submit-project-data-machine/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

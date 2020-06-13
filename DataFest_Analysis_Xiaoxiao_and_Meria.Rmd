@@ -1,18 +1,19 @@
 ---
 title: "DataFest-Xiaoxiao Wu & Meria"
-output:
-  word_document: default
-  pdf_document: default
 ---
 
+<<<<<<< HEAD:DataFest-Analysis-Xiaoxiao & Meria.Rmd
 library(gtrendsR)
 library(tidyverse)
 library(flexdashboard)
 # General trend plots of search terms 
+=======
+# Mental health
+
+>>>>>>> b2443a8f1af6496f3223f6549f748758497da97b:DataFest_Analysis_Xiaoxiao_and_Meria.Rmd
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
 plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2020-01-31 2020-06-10"))
 plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2019-01-31 2019-06-10"))
-plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2019-01-31 2020-06-10"))
 # search hits in 2020 are generally higher than ones in 2019
 ```
 
