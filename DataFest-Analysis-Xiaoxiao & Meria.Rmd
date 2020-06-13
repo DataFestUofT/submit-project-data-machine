@@ -8,6 +8,102 @@ output:
 library(gtrendsR)
 library(tidyverse)
 library(flexdashboard)
+
+# Meria's Part
+---
+title: 'Analysis 1 - Number of Cases vs Indoor Activities in Canada (Before lockdown) '
+author: "Meria"
+output: word_document
+---
+Initially we wanted to explore and look into Canadian prior to the lockdown date of March 17th.Initially, the  mean and variance for the following is calculated:
+1) the number of COVID cases in Canada
+2) the number of times indoor activities 
+3) the number of times outdoor activities
+```{r }
+library(readxl)
+covid1 <- read_excel("/Users/Daisy/Documents/GitHub/submit-project-data-machine/covid1.xls")
+cases = covid1[["cases"]]
+indoor_act =covid1[["indoor"]]
+outdoor_act = covid1[["outdoor"]]
+cases_mean = mean(cases)
+ind_mean = mean(indoor_act)
+out_mean = mean(outdoor_act)
+cases_var = var(cases)
+ind_var = var(indoor_act)
+out_var = var(outdoor_act)
+cases_mean 
+ind_mean 
+out_mean 
+cases_var 
+ind_var
+out_var 
+
+```
+
+
+Looking at the linear correlation coeffiencent between the folllowing, one can determine the strength and ditection of the linear relationship. The sign of r indicated the direction of the linear relationship between the x variable(number of cases) and the y variable(number pf searchs on indoor and outdoor activites:
+1) number of covid confirmed cases and the number of searches on indoor activities is 0.83642. In this cases,r<0 indicating y-variable(number of searches on indoor activities) tends to increases as x variable(number of cases) increases. The size of abs(r) indicates the strength of the linear relationship between y and x variable. In this case, r is near 1 indicating the the linear relationship between the variabes is strong.
+2) number of covid confirmed cases and the number of searches about outdoor activities in -0.77115. Similarily here, the negative r value indicates that y-variable(number of searches on outdoor activities) tends to decreases as x increases.Also, since it is close to 1, this indicates a strong linear relationship.
+```{r}
+Cor_ind = cor(cases,indoor_act)
+cor_out = cor(cases, outdoor_act)
+
+Cor_ind
+cor_out
+```
+
+Determining the simple linear regression when using confirmed cases as the explanatory variable and number of searches indoor and outdoor as separate response variables gives us:
+1)Equation for cases vs. indoor y = 0.008246x + 9.11280
+2)Equation for cases vs. outdoor y = -0.01085x + 49.81109
+```{r}
+ind_lm = lm(formula=indoor_act~cases)
+  
+out_lm = lm(formula = outdoor_act~cases)
+
+ind_lm
+out_lm
+
+plot(ind_lm)
+plot(ind_lm)
+
+```
+
+
+Statistical T-test for Indoor activites:
+          y=$$B_0$$ + $$B_1$$(x) +$$e_i$$
+1) Stating hypothesis: 
+        Hypo_null: no linear relationship between y and x. $$B_1$$=0.
+        Hypo_alter: there is a linear relationship between y and x. $$B_1$$ not equal 0.
+2)$$T_o$$ for Indoor activites = 11.01
+3) P - value for Indoor activites = 3.439e-15
+4) Conclusion: At level of 5%, since p-value<0.05; we reject null hypothesis which states that there is not linear relationship between number of cases and number of search terms on indoor activities.
+5) R^2 =0.6938 . 69% indicates the linear regression model explains most of the variation in the response variable(number of searches on indoor activites) around its mean.
+
+
+
+Statistical T-test for Outdoor activites:
+          y=$$B_0$$ + $$B_1$$(x) +$$e_i$$
+1) Stating hypothesis: 
+        Hypo_null: no linear relationship between y and x. $$B_1$$=0.
+        Hypo_alter: there is a linear relationship between y and x. $$B_1$$ not equal 0.
+2)$$T_o$$ for Outdoor activites = -8.735
+3) P - value for Outdoor activites = 8.96e-12
+4) Conclusion: At level of 5%, since p-value<0.05; we reject null hypothesis which states that there is not linear relationship between number of cases and number of search terms on outdoor activities.
+5) R^2 = 0.5869 . 59% indicates the linear regression model explains most of the variation in the response variable(number of searches on outdoor activites) around its mean.
+
+```{r}
+summary(ind_lm)
+summary(out_lm)
+```
+
+
+
+
+
+
+
+##########Xiaoxiao's Part ########################
+
 # General trend plots of search terms 
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
 plot(gtrendsR::gtrends(keyword = ("mental health"), geo = "CA", time = "2020-01-31 2020-06-10"))
@@ -34,7 +130,7 @@ plot(gtrendsR::gtrends(keyword = c("Mask","Hand sanitizer","Toilet paper"), geo 
 ```
 
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
-plot(gtrendsR::gtrends(keyword = c("baking + home yoga + homer exercise + home meditation + online shopping + hair cut", "stores near me + beach near me + shopping mall + hiking + park + hair salon"),geo = "CA", time = "2020-01-31 2020-06-10")) #integrated indoor activities v.s. outdoor activities
+plot(gtrendsR::gtrends(keyword = c("baking + home yoga + home exercise + home meditation + online shopping + hair cut", "stores near me + beach near me + shopping mall + hiking + park + hair salon"),geo = "CA", time = "2020-01-31 2020-06-10")) #integrated indoor activities v.s. outdoor activities
 ```
 ##Linear regression on periods after the lockdown
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
@@ -54,13 +150,37 @@ after_indoor_model <- lm(afterLockdown$`Sum of numtoday`~ afterLockdown$indoor)
 summary(after_indoor_model)
 plot(after_indoor_model)
 ```
+1) Stating hypothesis: 
+        Hypo_null: no linear relationship between y and x. $$B_1$$=0.
+        Hypo_alter: there is a linear relationship between y and x. $$B_1$$ not equal 0.
+3) P - value for indoor activites = 0.000537
+4) Conclusion: At level of 5%, since p-value<0.05; we reject null hypothesis which states that there is not linear relationship between number of cases and number of search terms on indoor activities.
+5) R^2 = 0.1262 . indicates the linear regression model explains a few of the variation in the response variable(number of searches on indoor activites) around its mean.
+
+
+
+
+
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
 cor.test(afterLockdown$outdoor,afterLockdown$`Sum of numtoday`)
 after_outdoor_model <- lm(afterLockdown$`Sum of numtoday`~ afterLockdown$outdoor)
 summary(after_outdoor_model)
 plot(after_outdoor_model)
 ```
+1) Stating hypothesis: 
+        Hypo_null: no linear relationship between y and x. $$B_1$$=0.
+        Hypo_alter: there is a linear relationship between y and x. $$B_1$$ not equal 0.
+3) P - value for outdoor activites = 0.0018
+4) Conclusion: At level of 5%, since p-value<0.05; we reject null hypothesis which states that there is not linear relationship between number of cases and number of search terms on outdoor activities.
+5) R^2 = 0.1019  . indicates the linear regression model explains a few of the variation in the response variable(number of searches on outdoor activites) around its mean.
+
+
+
+
+
 ##Linear regression on periods after the lockdown and before the phase 1 reopen (May.14)
+
+## Performance for Models below is not adquate
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
 phase1<- covid19[as.Date(Date,format='%d-%m-%Y') > as.Date('2020-03-17') & as.Date(Date,format='%d-%m-%Y')<= as.Date('2020-05-14'),]
 ```
