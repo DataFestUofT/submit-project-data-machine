@@ -1,0 +1,12 @@
+bookdown::gitbook:
+  split_by: section
+  css: [css/style.css, css/box.css]
+  config:
+    toc:
+      before: |
+        <li><a href="./">DataFest2020:Data Machine Team</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    sharing:
+      github: yes
+      facebook: no

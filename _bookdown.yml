@@ -1,0 +1,9 @@
+delete_merged_file: true
+clean: [packages.bib]
+language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
+  ui:
+    chapter_name: "Chapter "
+edit: "https://github.com/DataFestUofT/submit-project-data-machine/edit/master/%s"

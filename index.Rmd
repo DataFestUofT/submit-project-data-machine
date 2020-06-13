@@ -1,22 +1,45 @@
 ---
 title: "DataFest - Data Machine Team"
-author: "Sose M Casas, Meria Djirar, Anna Lai,and Xiaoxiao Wu"
+author: "Jose M Casas, Meria Djirar, Anna Lai,and Xiaoxiao Wu"
 date: "June 14, 2020"
-output: html_notebook
+editor_options:
+  chunk_output_type: inline
+fontsize: 10.5pt
+github-repo: DataFestUofT/submit-project-data-machine
+mainfont: Palatino
+site: bookdown::bookdown_site
+documentclass: krantz
 ---
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, debug=TRUE)
+#knitr::opts_chunk$set(echo = TRUE, debug=TRUE, tidy = TRUE)
+
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
+
+install.packages('bookdown')
 install.packages('gtrendsR')
 library (gtrendsR)
 library(ggplot2)
+
+if (knitr::is_html_output()) {
+  # ignore percentage widths for HTML output, unless they are used for multiple
+  # figures side by side
+  knitr::opts_hooks$set(out.width = function(options) {
+    if (options$fig.show != 'hold' && grepl('%$', options$out.width))
+      options$out.width = NULL
+    options
+  })
+}
 ```
 
-## DataFest
-Presented by Meria Dijirar, Jose M Cases, Anna Lai, Xiaoxiao Wu
 
-### Indoor phyiscal activity
+## DataFest 2020 Summer Project presented by Data Machine Team
+### Name/ Title of our project {#sections .unnumbered}
+
+### Indoor phyiscal activity {-}
 Exploring the trend of indoor physical activties such as workout and yoga and the will of going to a physical gym via Google Trend. 
 ```{r cars}
 trends = gtrends(keyword = c("learn yoga at home","workout apps free", "gyms near me"), geo = "CA", time = "2020-03-10 2020-06-05")
@@ -38,8 +61,7 @@ plot<-ggplot(data=time_trend, aes(x=date, y=hits,group=keyword,col=keyword))+
 
 ```
 
-
-### Outdoor activities
+### Outdoor activities {-}
 Exploring the trend of searching outdoor physical activties such as going to a nearby Park by google Trend. 
 ```{r}
 otrends = gtrends(keyword = c("Trinity Bellwoods","High Park", "parks near me"), geo = "CA", time = "2020-01-01 2020-06-05")
