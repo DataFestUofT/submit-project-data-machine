@@ -21,7 +21,7 @@ Initially we wanted to explore and look into Canadian prior to the lockdown date
 3) the number of times outdoor activities
 ```{r }
 library(readxl)
-covid1 <- read_excel("/Users/Daisy/Documents/GitHub/submit-project-data-machine/covid1.xls")
+covid1 <- read_excel("covid1.xls")
 cases = covid1[["cases"]]
 indoor_act =covid1[["indoor"]]
 outdoor_act = covid1[["outdoor"]]

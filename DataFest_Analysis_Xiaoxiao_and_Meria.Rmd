@@ -39,7 +39,7 @@ plot(gtrendsR::gtrends(keyword = c("baking + home yoga + homer exercise + home m
 ```
 ##Linear regression on periods after the lockdown
 ```{r,echo=T, eval=T,cache=T, message=F,warning=F}
-covid19 <- as.data.frame(readxl::read_excel("submit-project-data-machine/COVID-19 Canada Dataset (group by month and daily) v.s. google trend.xlsx"))
+covid19 <- as.data.frame(readxl::read_excel("COVID-19_Canada_Dataset_(group_by_month_and_daily)v.s.googletrend"))
 head(covid19)
 attach(covid19)
 ```
